@@ -1,10 +1,14 @@
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
+import { Helmet } from 'react-helmet';
+import { TheCompany } from "../../components/TheCompany/TheCompany";
 
 export const About =() =>{
     return(
-        <ContentWrapper title="abouut">
-            <h1>welcome to the About.jsx-page</h1>
+        <>
+        <Helmet><title>About The Company</title></Helmet>
+        <ContentWrapper title="About">
+            <h3>we are <TheCompany/></h3>
         </ContentWrapper>
-        
+        </>
     )
 }

@@ -1,6 +1,7 @@
 .navWrapper {
   background-color: #333;
   padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
   ul {
     display: flex;
     justify-content: flex-end;
@@ -11,7 +12,7 @@
         margin-right: 0; /* Fjern margen fra det sidste element */
       }
       .NavLink {
-        color: #fff !important; /* Hvid tekstfarve */
+        color:aquamarine;
         text-decoration: none; /* Fjern understregning */
         font-weight: 100;
         font-size: 16px; /* Juster skriftstørrelsen efter behov */
