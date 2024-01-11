@@ -2,17 +2,21 @@
   background-color: #333;
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
+
   ul {
     display: flex;
     justify-content: flex-end;
     list-style-type: none; /* Fjern prikker */
+
     li {
       margin-right: 15px; /* Juster margen mellem menu punkter efter behov */
+      
       &:last-child {
         margin-right: 0; /* Fjern margen fra det sidste element */
       }
+
       .NavLink {
-        color:aquamarine;
+        color: aquamarine;
         text-decoration: none; /* Fjern understregning */
         font-weight: 100;
         font-size: 16px; /* Juster skriftstørrelsen efter behov */
@@ -20,8 +24,11 @@
         &:hover {
           text-decoration: underline; /* Vis understregning ved hover */
         }
+
+
       }
     }
   }
 }
+
 
