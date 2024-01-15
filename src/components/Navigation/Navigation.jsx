@@ -7,8 +7,8 @@ export const Navigation = () => {
       <ul>
         <li><NavLink to="/"className={styles.NavLink}>HJEM</NavLink></li>
         <li><NavLink to="/about"className={styles.NavLink}>OM</NavLink></li>
-        <li><NavLink to="/contact"className={styles.NavLink}>KONTAKT</NavLink></li>
-        <li><NavLink to="/products"className={styles.NavLink}>KONCEPTER</NavLink></li>
+        <li><NavLink to="/todo"className={styles.NavLink}>TO DO</NavLink></li>
+        <li><NavLink to="/hooks"className={styles.NavLink}>HOOKS</NavLink></li>
       </ul>
     </nav>
   );
