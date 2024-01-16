@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 .navWrapper {
-  background-color: #333;
-  padding: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: inter;
 
   ul {
     display: flex;
@@ -12,14 +13,14 @@
       margin-right: 15px; /* Juster margen mellem menu punkter efter behov */
       
       &:last-child {
-        margin-right: 0; /* Fjern margen fra det sidste element */
+        margin-right: 1rem; /* Fjern margen fra det sidste element */
       }
 
       .NavLink {
-        color: aquamarine;
+        color: rgb(22, 21, 21);
         text-decoration: none; /* Fjern understregning */
-        font-weight: 100;
-        font-size: 16px; /* Juster skriftstørrelsen efter behov */
+        font-weight: 600;
+        font-size: 0.8rem; /* Juster skriftstørrelsen efter behov */
       
         &:hover {
           text-decoration: underline; /* Vis understregning ved hover */
