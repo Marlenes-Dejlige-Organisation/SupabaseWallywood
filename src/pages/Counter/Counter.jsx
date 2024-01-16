@@ -47,6 +47,7 @@ export const Counter = () => {
   
     // JSX-struktur for stopur-komponenten med tilhørende styling-klasse fra Counter.module.scss
     return (
+        <div className={styles.container}>
         <div className={styles.stopwatch}>
           <h1 className={styles.header}>STOPUR</h1>
           <div className={styles.display}>
@@ -60,6 +61,7 @@ export const Counter = () => {
               Reset
             </button>
           </div>
+        </div>
         </div>
       );
 };
