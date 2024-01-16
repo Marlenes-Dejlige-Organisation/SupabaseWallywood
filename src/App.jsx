@@ -4,6 +4,7 @@ import { Main } from './components/Main/Main'
 import { Footer } from './components/Footer/Footer'
 import { Home } from './pages/Home/Home'
 import { Hooks} from './pages/Hooks/Hooks'
+import { Counter} from './pages/Counter/Counter'
 import { About } from './pages/About/About'
 import { ToDo } from './pages/ToDo/ToDo'
 import { Route, Routes } from 'react-router-dom'
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/hooks" element={<Hooks />} />
         <Route path="/todo" element={<ToDo />} />
+        <Route path="/counter" element={<Counter />} />
         <Route path="*" element={<NotFound />} />
     
   </Routes>
