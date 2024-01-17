@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import styles from './JokeComp.module.scss';
