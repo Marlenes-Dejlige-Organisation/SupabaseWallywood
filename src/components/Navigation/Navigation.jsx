@@ -10,6 +10,7 @@ export const Navigation = () => {
         <li><NavLink to="/todo"className={styles.NavLink}>TO DO</NavLink></li>
         <li><NavLink to="/counter"className={styles.NavLink}>COUNTER</NavLink></li>
         <li><NavLink to="/hooks"className={styles.NavLink}>SMÅ-HOOKS</NavLink></li>
+        <li><NavLink to="/jokes"className={styles.NavLink}>Jokes</NavLink></li>
       </ul>
     </nav>
   );

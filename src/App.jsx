@@ -1,5 +1,6 @@
 import './App.scss'
 import { Header } from './components/Header/Header'
+import {Jokes} from './pages/Jokes/Jokes'
 import { Main } from './components/Main/Main'
 import { Footer } from './components/Footer/Footer'
 import { Home } from './pages/Home/Home'
@@ -26,6 +27,7 @@ function App() {
         <Route path="/hooks" element={<Hooks />} />
         <Route path="/todo" element={<ToDo />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/jokes" element={<Jokes/>} />
         <Route path="*" element={<NotFound />} />
     
   </Routes>
