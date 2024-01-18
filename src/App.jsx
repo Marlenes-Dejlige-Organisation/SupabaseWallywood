@@ -6,10 +6,9 @@ import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
 import { Home } from './pages/Home/Home';
 import { About } from './pages/About/About';
-import { Hooks } from './pages/Hooks/Hooks';
-import { ToDo } from './pages/ToDo/ToDo';
-import { Counter } from './pages/Counter/Counter';
-import { Jokes } from './pages/Jokes/Jokes';
+import { Plakater } from './pages/Plakater/Plakater';
+import { Contact } from './pages/Contact/Contact';
+import { Login } from './pages/Login/Login';
 import { NotFound } from './components/NotFound/NotFound';
 import { UseToast } from './components/Toast/UseToast'; // Tjek at import-stien er korrekt
 
@@ -25,10 +24,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           {/* Send showToast-prop til Hooks */}
-          <Route path="/hooks" element={<Hooks showToast={showToast} />} />
-          <Route path="/todo" element={<ToDo />} />
-          <Route path="/counter" element={<Counter showToast={showToast} />} />
-          <Route path="/jokes" element={<Jokes showToast={showToast} />} />
+          <Route path="/plakater" element={<Plakater showToast={showToast} />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Main>

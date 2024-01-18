@@ -2,12 +2,11 @@ import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
 
 
 
-export const Contact =() =>{
+export const Login =() =>{
     return(
         <>
    
-        <ContentWrapper title="Kontakt os">
-            <form action=""></form>
+        <ContentWrapper title="Login">            
         </ContentWrapper>
         </>
     )

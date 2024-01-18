@@ -5,12 +5,12 @@ export const Navigation = () => {
   return (
     <nav className={styles.navWrapper}>
       <ul>
-        <li><NavLink to="/"className={styles.NavLink}>HJEM</NavLink></li>
-        <li><NavLink to="/about"className={styles.NavLink}>OM</NavLink></li>
-        <li><NavLink to="/todo"className={styles.NavLink}>TO DO</NavLink></li>
-        <li><NavLink to="/counter"className={styles.NavLink}>COUNTER</NavLink></li>
-        <li><NavLink to="/hooks"className={styles.NavLink}>SMÅ-HOOKS</NavLink></li>
-        <li><NavLink to="/jokes"className={styles.NavLink}>JOKES</NavLink></li>
+        <li><NavLink to="/"className={styles.NavLink}>HOME</NavLink></li>
+        <li><NavLink to="/plakater"className={styles.NavLink}>PLAKATER</NavLink></li>
+
+        <li><NavLink to="/about"className={styles.NavLink}>OM OS</NavLink></li>
+        <li><NavLink to="/contact"className={styles.NavLink}>KONTAKT</NavLink></li>
+        <li><NavLink to="/login"className={styles.NavLink}>LOGIN</NavLink></li>
       </ul>
     </nav>
   );
