@@ -31,7 +31,7 @@ export const HomeCards = () => {
           <div>
             <h4>{poster.name}</h4>
             <p>{poster.slug}</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, doloremque et! In tota natus! Beatae ratione nemo dolore dolores culpa, aperiam excepturi ex!</p>
+            <p>Lorem ipsum dolor sit amet consectetur,  elit. Ab, doloremque et! In tota natus! Beatae ratione nemo dolore dolores culpa, aperiam excepturi ex!</p>
             {poster.genres && (
               <p>Genre: {poster.genres.map((genre) => genre.title).join(', ')}</p>
             )}

@@ -9,7 +9,7 @@ export const Home = () => {
         <>
             <title>WALLYWOOD</title>
             <header> <img src={Curtains} alt="gardiner" /></header>
-            <ContentWrapper title={<>Sidste nyt</>}>
+            <ContentWrapper title={<>Sidste nyt...</>}>
                 <HomeCards/>
                
             </ContentWrapper>
