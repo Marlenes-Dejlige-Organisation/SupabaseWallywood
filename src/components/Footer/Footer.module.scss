@@ -1,7 +1,18 @@
-footer{
-    padding: 1rem;
-    padding-bottom: 4rem;
-    color: rgb(9, 9, 9);
-    margin-top: auto; /* Skubber footer til bunden */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-top: #D97852 solid 1px;
+  padding-bottom: 4rem;
+  color: rgb(9, 9, 9);
+  margin-top: auto;
   width: 100%;
+  p{
+    margin: 0;
+  }
+
+  .p2 {
+    color: #D97852;
+    font-weight: 700;
+
+  }
 }

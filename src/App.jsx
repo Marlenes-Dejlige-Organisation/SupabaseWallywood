@@ -10,13 +10,17 @@ import { Plakater } from './pages/Plakater/Plakater';
 import { Contact } from './pages/Contact/Contact';
 import { Login } from './pages/Login/Login';
 import { NotFound } from './components/NotFound/NotFound';
-import { UseToast } from './components/Toast/UseToast'; // Tjek at import-stien er korrekt
+import { UseToast } from './components/Toast/UseToast';
+import PageContainer from './components/PageContainer/PageContainer'; // Tilpas stien
+
+import './app.scss'; // Inkluder app.scss
 
 function App() {
   const { showToast, toast } = UseToast();
 
   return (
     <>
+    <PageContainer>
       <Navigation />
       <Main>
         {toast && <div className={`toast ${toast.type}`}>{toast.message}</div>}
@@ -31,6 +35,7 @@ function App() {
         </Routes>
       </Main>
       <Footer />
+      </PageContainer>
     </>
   );
 }
