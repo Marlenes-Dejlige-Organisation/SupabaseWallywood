@@ -22,8 +22,15 @@
         li {
           cursor: pointer;
           margin-bottom: 5px;
+  
           &:hover {
             text-decoration: underline;
+          }
+  
+          // Ny styling for den aktive genre
+          &.active {
+            font-weight: 700;
+            color: #D97852;
           }
         }
       }
@@ -60,6 +67,7 @@
             padding: 5px 10px;
             border: none;
             cursor: pointer;
+  
             &:hover {
               background-color: #0056b3;
             }

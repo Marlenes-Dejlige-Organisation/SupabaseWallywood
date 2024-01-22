@@ -1,9 +1,12 @@
 // pageContainer.scss
 .page-container {
-    background-color: #F9F9F9; /* Brun baggrundsfarve */
+    background-color: #F9F9F9; 
     width: 1067px; /* Bredde på 1067px */
     margin: 0 auto; /* Centrer indholdet */
-    padding: 20px; /* Juster padding efter behov */
-  
+    padding: 2rem; /* Juster padding efter behov */
+    min-height: 100vh;  /* Minimum 100% af viewportens højde */
+  display: flex;
+  flex-direction: column;
+
   }
   

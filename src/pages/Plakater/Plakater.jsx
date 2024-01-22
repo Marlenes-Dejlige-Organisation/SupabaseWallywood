@@ -1,5 +1,7 @@
+// Plakater.jsx
+
 import React, { useState, useEffect } from 'react';
-import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
+import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper';
 import styles from './Plakater.module.scss';
 
 export const Plakater = () => {
@@ -59,7 +61,12 @@ export const Plakater = () => {
             <ul>
               {/* 5a. Mapper gennem genrerne og opretter klikbare elementer. */}
               {genrer.map((genre) => (
-                <li key={genre.id} onClick={() => handleGenreChange(genre.slug)}>
+                // Hvis den nuværende genre er den valgte, anvend en anden klasse
+                <li
+                  key={genre.id}
+                  onClick={() => handleGenreChange(genre.slug)}
+                  className={genre.slug === valgtGenre ? styles.active : ''}
+                >
                   {genre.title}
                 </li>
               ))}

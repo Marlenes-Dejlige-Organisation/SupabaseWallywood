@@ -2,7 +2,10 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+    .billede{
+        margin-left: 2rem;
+    }
     img{
         height: 100%;
         width: 100%;
