@@ -1,5 +1,6 @@
 import styles from './Footer.module.scss'
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
+import  Facebook from '../../assets/images/vektor/facebook.png'
 
 
 
@@ -13,8 +14,8 @@ export const Footer = () => {
         <div>
         <p>CVR: 12345678 <br /> MAIL: info@plakatshoppen.dk <br /> MOBIL: +45 9812 3456</p>
         </div> 
-        <div>
-        <p>lidt links </p>
+        <div className={styles.ikoner}>
+        <img src={Facebook} alt="gardiner" /><img src={Facebook} alt="gardiner" /><img src={Facebook} alt="gardiner" />
         </div> 
     </footer>
 }

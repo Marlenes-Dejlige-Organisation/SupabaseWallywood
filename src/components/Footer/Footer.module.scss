@@ -1,3 +1,4 @@
+/* Footer.module.scss */
 footer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -7,13 +8,28 @@ footer {
   color: rgb(9, 9, 9);
   margin-top: auto;
   width: 100%;
-  p{
+
+  p {
     margin: 0;
   }
 
   .p2 {
     color: #D97852;
     font-weight: 700;
+  }
 
+ 
+
+
+}
+.ikoner {
+  display: flex;
+  justify-content: end;
+
+  img {
+    width: 100%;
+    height: 100%; /* Maksimal højde for at bevare proportionerne */
+    opacity: 0.4;
+  
   }
 }
