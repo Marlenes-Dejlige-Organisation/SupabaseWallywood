@@ -62,7 +62,7 @@ export const Plakater = () => {
         <div className={styles['plakater-container']}>
           {/* Venstre side med filtre og genrer */}
           <div className={styles['filter-side']}>
-            <h2>Filtre</h2>
+            <h2>FiltreTEST</h2>
             <h3>Genre</h3>
             <ul>
               {/* 5a. Mapper gennem genrerne og opretter klikbare elementer. */}

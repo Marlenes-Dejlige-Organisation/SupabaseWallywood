@@ -23,12 +23,12 @@ function App() {
     <PageContainer>
       <Navigation />
       <Main>
-        {toast && <div className={`toast ${toast.type}`}>{toast.message}</div>}
+     
         <Routes>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* Send showToast-prop til Hooks */}
-          <Route path="/plakater" element={<Plakater />} > </Route>
+  
+          <Route path="/plakater" element={<Plakater />} ></Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
