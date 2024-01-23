@@ -1,16 +1,18 @@
-// Plakater.jsx
-
 import React, { useState, useEffect } from 'react';
 import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper';
 import styles from './Plakater.module.scss';
 
 export const Plakater = () => {
-  // 1. useState Hooks for at holde styr på tilstanden af genrer, den valgte genre og plakaterne.
+  // 1. State Hooks til at håndtere tilstanden af genrer, den valgte genre, og plakaterne.
   const [genrer, setGenrer] = useState([]);
   const [valgtGenre, setValgtGenre] = useState('');
   const [plakater, setPlakater] = useState([]);
+  const [minPris, setMinPris] = useState(0);
+  const [maxPris, setMaxPris] = useState(0);
 
-  // 2. useEffect til Fetching af Genrer og default plakater ved indlæsning.
+ 
+
+  // 2. useEffect til at hente genrer og standard plakater ved indlæsning af komponenten.
   useEffect(() => {
     fetch('http://localhost:3000/genre')
       .then((response) => response.json())
@@ -28,28 +30,32 @@ export const Plakater = () => {
           fetch(`http://localhost:3000/posters/list_by_genre/${initialGenreSlug}`)
             .then((plakaterResponse) => plakaterResponse.json())
             .then((plakaterData) => setPlakater(plakaterData))
-            .catch((error) => console.error('Error fetching plakater:', error));
+            .catch((error) => console.error('Fejl ved hentning af plakater:', error));
         }
       })
-      .catch((error) => console.error('Error fetching genrer:', error));
+      .catch((error) => console.error('Fejl ved hentning af genrer:', error));
   }, []);
 
-  // 3. useEffect til Fetching af Plakater baseret på den valgte genre.
+  // 3. useEffect til at hente plakater baseret på den valgte genre
   useEffect(() => {
     if (valgtGenre) {
-      fetch(`http://localhost:3000/posters/list_by_genre/${valgtGenre}`)
+      let url = `http://localhost:3000/posters/list_by_genre/${valgtGenre}`;
+
+      // 3b. Henter plakater fra den opbyggede URL.
+      fetch(url)
         .then((response) => response.json())
         .then((data) => setPlakater(data))
-        .catch((error) => console.error('Error fetching plakater:', error));
+        .catch((error) => console.error('Fejl ved hentning af plakater:', error));
     }
   }, [valgtGenre]);
+
 
   // 4. Funktion til at håndtere ændring af den valgte genre.
   const handleGenreChange = (nyGenre) => {
     setValgtGenre(nyGenre);
   };
 
-  // 5. Renderer indholdet, herunder en liste af genrer og plakater fra den valgte genre.
+  // 5. Render indholdet, inklusive en liste af genrer og plakater fra den valgte genre.
   return (
     <>
       <ContentWrapper title="Plakater">
@@ -71,13 +77,31 @@ export const Plakater = () => {
                 </li>
               ))}
             </ul>
+            <h3>Prisområde</h3>
+            <div className={styles.pris}>
+              
+              {/* 5b. Opdaterer minPris ved ændring i inputværdien. */}
+
+              <input
+                type="number"
+                value={minPris}
+                onChange={(e) => setMinPris(e.target.value)}
+              />  
+
+              {/* 5c. Opdaterer maxPris ved ændring i inputværdien. */}
+              <input
+                type="number"
+                value={maxPris}
+                onChange={(e) => setMaxPris(e.target.value)}
+              />
+            </div>
           </div>
 
           {/* Højre side med plakater */}
           <div className={styles['plakat-side']}>
             <h2>Plakater</h2>
             <div className={styles['plakat-grid']}>
-              {/* 5b. Mapper gennem plakater og opretter elementer til visning. */}
+              {/* 5f. Mapper gennem plakater og opretter elementer til visning. */}
               {plakater.map((plakat) => (
                 <div key={plakat.id}>
                   <img src={plakat.image} alt={plakat.name} />
