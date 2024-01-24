@@ -10,14 +10,14 @@ import { Plakater } from './pages/Plakater/Plakater';
 import { Contact } from './pages/Contact/Contact';
 import { Login } from './pages/Login/Login';
 import { NotFound } from './components/NotFound/NotFound';
-import { UseToast } from './components/Toast/UseToast';
-import PageContainer from './components/PageContainer/PageContainer'; // Tilpas stien
+import PageContainer from './components/PageContainer/PageContainer';
 
-import './app.scss'; // Inkluder app.scss
+import './app.scss'; 
+import { PosterList } from './components/Poster-routing/PosterList';
+import { PosterDetails } from './components/Poster-routing/PosterDetails';
 
 function App() {
-  const { showToast, toast } = UseToast();
-
+  
   return (
     <>
     <PageContainer>
@@ -28,7 +28,11 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
   
-          <Route path="/plakater" element={<Plakater />} ></Route>
+          <Route path="/plakater" element={<Plakater />} >
+            <Route path=":genre" element={<PosterList/>}/>
+            <Route path=":genre/:poster" element={<PosterDetails/>}/>
+
+          </Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
