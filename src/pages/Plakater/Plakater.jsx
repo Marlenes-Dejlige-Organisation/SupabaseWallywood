@@ -10,12 +10,12 @@ export const Plakater = () => {
   return (
     <ContentWrapper title="Plakater">
       <div className={styles.pageContainer}>
-        <div>
-        <GenreNav />
-</div>
-<div className={styles.posterContainer}>
-        <Outlet />
-</div>
+        <div className={styles.ListContainer}>
+          <GenreNav />
+        </div>
+        <div className={styles.posterContainer}>
+          <Outlet />
+        </div>
       </div>
     </ContentWrapper>
   );

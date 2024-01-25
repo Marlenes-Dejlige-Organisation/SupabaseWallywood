@@ -1,9 +1,46 @@
 .pageContainer {
- display: grid;
- grid-template-columns: 1fr 3fr;
+    display: flex;
+    gap: 10rem;
+    padding-bottom: 4rem;
 }
 
-.posterContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+
+
+.ListContainer {
+    flex: 1;
+    
+    
+  
+    h3 {
+      margin-top: 20px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        cursor: pointer;
+      
+        margin-bottom: 5px;
+
+        a{
+            color: #D97852;
+            text-decoration: none; 
+  
+        &:hover {
+          text-decoration: underline;
+          color: #D97852;
+
+        }
+  
+        // Ny styling for den aktive genre
+        &.active {
+          font-weight: 700;
+          color: #D97852;
+        } }
+      }
+    }
+  }
+  
