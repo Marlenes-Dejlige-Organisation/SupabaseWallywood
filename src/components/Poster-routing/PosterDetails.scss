@@ -1,0 +1,19 @@
+// PosterDetails.scss
+
+.poster-details-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px; // Adjust the gap according to your design
+  }
+  
+  .poster-details-container img {
+    max-width: 100%; // Make sure the image does not exceed its container width
+  }
+  
+  .poster-details-container h2,
+  .poster-details-container p {
+    margin: 0; // Remove default margin to prevent unwanted spacing
+  }
+  
+
+  
