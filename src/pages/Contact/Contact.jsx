@@ -1,4 +1,5 @@
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
+import { Formular } from "../../components/Formular/Formular"
 
 
 
@@ -7,7 +8,7 @@ export const Contact =() =>{
         <>
    
         <ContentWrapper title="Kontakt os">
-            <form action=""></form>
+            <Formular/>
         </ContentWrapper>
         </>
     )
