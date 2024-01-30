@@ -39,10 +39,8 @@ export const HomeCards = () => {
           </div>
           <div>
             <h4>{poster.name}</h4>
-            <p>{poster.slug}</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, elit. Ab, doloremque et! In tota natus! Beatae ratione nemo dolore dolores culpa, aperiam excepturi ex!
-            </p>
+            <p>En fed plakat. virkelig frisk og tiltalende. Den er ny i butikken. Den oplagte julegave. Der står noget mere her. Og en sidste lille kommentar.</p>
+
             {poster.genres && <p>Genre: {poster.genres.map((genre) => genre.title).join(', ')}</p>}
             {/* Knap, der kalder handleReadMoreClick med posterens slug som parameter */}
             <button onClick={() => navigate(`/plakater/${poster.slug}`)}>Læs mere</button>        </div>
