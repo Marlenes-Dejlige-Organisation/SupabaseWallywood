@@ -11,16 +11,17 @@ body {
     
   }
   button {
-    background-color: #D1B3A7;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: darkgrey 1px solid;
-    cursor: pointer;
+    margin-top: 0.5rem;
+  background-color: #d1b3a7;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: darkgrey 1px solid;
+  width: 60px;
+  cursor: pointer;
 
-    &:hover {
-      background-color: #A68E85;
-      font-weight: 700;
-     color: #fff;
-    }}
+  &:hover {
+    background-color: #d97852;
+  }
+    }
   
