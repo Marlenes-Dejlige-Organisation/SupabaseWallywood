@@ -25,6 +25,7 @@ export const Cart = () => {
         {cart.map(item => (
           <li key={item.id}>
             {/* Vis information om hvert vareelement */}
+            <img src={item.image} alt={item.title} style={{ width: '50px', marginRight: '10px' }} />
             {item.title} - {item.quantity} stk - Kr. {item.price.toFixed(2)} 
             <button onClick={() => removeFromCart(item.id)}>Fjern</button>
           </li>

@@ -24,7 +24,13 @@ export const PosterDetails = () => {
 
   const handleAddToCart = () => {
     if (apiData.stock >= quantity) {
-      addToCart({ id: apiData.id, title: apiData.name, price: apiData.price, quantity });
+      addToCart({
+        id: apiData.id,
+        title: apiData.name,
+        price: apiData.price,
+        quantity: quantity,
+        image: apiData.image, // inkludér billedet i kurven
+      });
       alert('Varen er blevet tilføjet til din kurv!');
     } else {
       alert('Der er ikke nok varer på lager.');
