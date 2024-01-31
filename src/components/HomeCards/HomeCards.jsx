@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importér useNavigate
-
 import styles from './HomeCards.module.scss';
+import axios from 'axios';
 
 export const HomeCards = () => {
   const [allPosters, setAllPosters] = useState([]);
   const [latestPosters, setLatestPosters] = useState([]);
-  const navigate = useNavigate(); // Initialisér useNavigate-hooket
+  const [selectedPoster, setSelectedPoster] = useState(null);
+  
+
+
+
 
   useEffect(() => {
     // Fetch all posters
@@ -23,11 +26,18 @@ export const HomeCards = () => {
     setLatestPosters(latestTwoPosters);
   }, [allPosters]);
 
-  // Funktion til at håndtere klik på "Læs mere"-knappen
-  const handleReadMoreClick = (slug) => {
-    // Navigér til posterDetails med den specifikke slug som parameter
-    navigate(`/.posterDetails/${slug}`);
-    const navigate = useNavigate();
+  const handleReadMoreClick = (poster) => {
+    // Vis modalen og gem den valgte plakat
+    setSelectedPoster(poster);
+
+    // Hent detaljerne for den valgte plakat
+    getData(poster.id);
+  };
+
+  const handleCloseModal = () => {
+    // Luk modalen og nulstil den valgte plakat
+    setSelectedPoster(null);
+
   };
 
   return (
@@ -39,13 +49,35 @@ export const HomeCards = () => {
           </div>
           <div>
             <h4>{poster.name}</h4>
-            <p>En fed plakat. virkelig frisk og tiltalende. Den er ny i butikken. Den oplagte julegave. Der står noget mere her. Og en sidste lille kommentar.</p>
+            <p>En fed plakat. Virkelig frisk og tiltalende. Den er ny i butikken. Den oplagte julegave. Der står noget mere her. Og en sidste lille kommentar.</p>
 
             {poster.genres && <p>Genre: {poster.genres.map((genre) => genre.title).join(', ')}</p>}
-            {/* Knap, der kalder handleReadMoreClick med posterens slug som parameter */}
-            <button onClick={() => navigate(`/plakater/${poster.slug}`)}>Læs mere</button>        </div>
+
+            {/* Brug Link i stedet for en button */}
+            <button onClick={() => handleReadMoreClick(poster)}>Læs mere</button>
+          </div>
         </div>
       ))}
+
+      {/* Modal */}
+      
+      {selectedPoster && (
+        
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <img src={selectedPoster.image} alt={selectedPoster.name} />
+            <div>
+              <h4>{selectedPoster.name}</h4>
+    <p>Details about this very niiice poster</p>
+                  <p>Varenummer (SKU): {selectedPoster.id}</p>
+                  <h4>Kr. {selectedPoster.price},00</h4>
+                  {/* Tilføj flere detaljer efter behov */}
+
+              <button onClick={handleCloseModal}>Luk modal</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
