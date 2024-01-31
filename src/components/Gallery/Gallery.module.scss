@@ -1,0 +1,24 @@
+.galleryContainer {
+    margin: 0 20px;
+  }
+  
+  .galleryTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .posterItem {
+    text-align: center;
+  }
+  
+  .posterItem img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }

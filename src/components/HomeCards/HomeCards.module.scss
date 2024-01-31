@@ -1,27 +1,93 @@
-.homecards{
+.homecards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 2rem;
     gap: 1rem;
 }
-.card{
+
+.card {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
-    img{
+
+    img {
         width: 100%;
         height: 100%;
     }
-    button {
-        background-color: #D1B3A7;
-        color: #fff;
-        padding: 5px 10px;
-        border: none;
-        cursor: pointer;
-     
 
-        &:hover {
-          background-color: #524641;
-        }
-      }
+    button {
+        margin-top: 2rem;
+
+
+    }
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modalContent {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  // Dette opretter et gitter med to kolonner
+    gap: 1rem;
+    max-width: 600px;
+    padding: 1rem;
+    background-color: #fff;
+    overflow-y: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    h3{
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+ 
+    h4{
+      color: #524641;
+    }
+    input{
+      width:25px;
+      padding: 0.4rem;
+      margin-right: 0.5rem;
+    }
+
+    img {
+      width: 100%;
+      max-height: 100%; /* Ændret fra 80vh til 100% for at tilpasse sig modalens højde */
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+  }
+}
+
+  .modalclose{
+   color: red;
+   border: none;
+   background-color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    font-weight: 700;
+
+    padding: 0.5rem;
+    &:hover {
+      color: fff;
+      background-color: black;
+    }
+
+  }
+
+  
+
+  
+  

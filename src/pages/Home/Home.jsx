@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
 import  Curtains from '../../assets/images/curtains.jpg'
 import styles from './Home.module.scss'

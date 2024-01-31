@@ -1,48 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Titillium+Web:wght@200;400;700;900&display=swap');
+
 .navWrapper {
   display: flex;
   justify-content: space-between;
   border-bottom: #D97852 solid 2px;
-h1{
-  margin: 0;
-  color: #D97852;
-  font-weight: 800;
-  font-size: 2rem;
-}
-  
+
+  h1 {
+    margin: 0;
+    color: #D97852;
+    font-weight: 800;
+    font-size: 2rem;
+  }
 
   ul {
     display: flex;
     justify-content: flex-end;
-    list-style-type: none; /* Fjern prikker */
+    list-style-type: none;
 
     li {
-      margin-right: 1.5rem; /* Juster margen mellem menu punkter efter behov */
-      
+      margin-right: 1.5rem;
+
       &:last-child {
-        margin-right: 1rem; /* Fjern margen fra det sidste element */
+        margin-right: 1rem;
       }
 
       .NavLink {
         font-family: 'Titillium Web', sans-serif;
         font-weight: 400;
         color: rgb(22, 21, 21);
-        text-decoration: none; /* Fjern understregning */
-       
-        font-size: 0.8rem; /* Juster skriftstørrelsen efter behov */
-      
+        text-decoration: none;
+        font-size: 0.8rem;
+
         &:hover {
-          text-decoration: underline; /* Vis understregning ved hover */
+          text-decoration: underline;
+         
         }
-
-
       }
+
+
     }
   }
 }
+.activeNavLink {
+  font-weight: 700;
+  color: #D97852;
+text-decoration: none;
 
-.ikon{
+}
+
+.ikon {
   display: flex;
   justify-content: end;
-  padding: 0 1rem ;
+  padding: 0 1rem;
 }
