@@ -34,6 +34,7 @@
   justify-content: center;
 
   .modalContent {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;  // Dette opretter et gitter med to kolonner
     gap: 1rem;
@@ -43,6 +44,20 @@
     overflow-y: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    h3{
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+ 
+    h4{
+      color: #524641;
+    }
+    input{
+      width:25px;
+      padding: 0.4rem;
+      margin-right: 0.5rem;
+    }
 
     img {
       width: 100%;
@@ -50,10 +65,27 @@
       object-fit: cover;
       border-radius: 5px;
     }
+
   }
 }
 
-  
+  .modalclose{
+   color: red;
+   border: none;
+   background-color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    font-weight: 700;
+
+    padding: 0.5rem;
+    &:hover {
+      color: fff;
+      background-color: black;
+    }
+
+  }
 
   
 
