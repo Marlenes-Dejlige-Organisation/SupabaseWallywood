@@ -11,7 +11,7 @@ export const Navigation = () => {
       <nav className={styles.navWrapper}>
         <h1>WALLYWOOD</h1>
         <ul>
-          <li><NavLink exact to="/" className={({isActive})=> isActive ? styles.activeNavLink : styles.NavLink} >HOME</NavLink></li>
+          <li><NavLink to="/" className={({isActive})=> isActive ? styles.activeNavLink : styles.NavLink} >HOME</NavLink></li>
           <li><NavLink to="/plakater" className={({isActive})=> isActive ? styles.activeNavLink : styles.NavLink}>PLAKATER</NavLink></li>
           <li><NavLink to="/about" className={({isActive})=> isActive ? styles.activeNavLink : styles.NavLink}>OM OS</NavLink></li>
           <li><NavLink to="/contact" className={({isActive})=> isActive ? styles.activeNavLink : styles.NavLink}>KONTAKT</NavLink></li>
