@@ -45,7 +45,7 @@ export const Login = () => {
             ) : (
 
                 <div>
-                    <h2>Du er logget ind som {`${loginData.user.firstname} ${loginData.user.lastname}`}</h2>
+
                     <button onClick={()=> LogOut()}>Log ud</button>
                 </div>
 
