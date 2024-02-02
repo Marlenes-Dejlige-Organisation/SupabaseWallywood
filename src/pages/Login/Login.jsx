@@ -25,32 +25,36 @@ export const Login = () => {
 
     return (
         <ContentWrapper title="Login">
-            {!loginData ? (
-                <form method="POST" onSubmit={handleSubmit(MarlenesSubmitHandler)}>
-                    <div>
-                        <label htmlFor="username">Email:</label>
-                        <input type="email" id="username" {...register('username', { required: true })} />
-                        {errors.username && <span>Bruger-email skal udfyldes</span>}
-                    </div>
-                    <div>
-                        <label htmlFor="password">Adgangskode:</label>
-                        <input type="password" id="password" {...register('password', { required: true })} />
-                        {errors.password && <span>Password skal udfyldes</span>}
-                    </div>
-                    <div>
-                        <button>Login</button>
-                    </div>
-                </form>
-
-            ) : (
-
-                <div>
-
-                    <button onClick={()=> LogOut()}>Log ud</button>
-                </div>
-
-            )}
-
+          {!loginData ? (
+            // Vis login-formularen, hvis brugeren ikke er logget ind.
+            <form method="POST" onSubmit={handleSubmit(MarlenesSubmitHandler)}>
+              <div>
+                <label htmlFor="username">Email:</label>
+                <input type="email" id="username" {...register('username', { required: true })} />
+                {errors.username && <span>Bruger-email skal udfyldes</span>}
+              </div>
+              <div>
+                <label htmlFor="password">Adgangskode:</label>
+                <input type="password" id="password" {...register('password', { required: true })} />
+                {errors.password && <span>Password skal udfyldes</span>}
+              </div>
+              <div>
+                <button>Login</button>
+              </div>
+            </form>
+          ) : (
+            // Hvis brugeren er logget ind og der er navne, vis en velkomstbesked og en logud-knap.
+            <div>
+              {loginData.user && loginData.user.firstname && loginData.user.lastname ? (
+                <h2>Du er logget ind som {`${loginData.user.firstname} ${loginData.user.lastname}`}</h2>
+              ) : (
+                <h2>Du er logget ind</h2>
+              )}
+              <button onClick={() => LogOut()}>Log ud</button>
+            </div>
+          )}
         </ContentWrapper>
-    );
+      );
+      
+      
 };

@@ -3,14 +3,14 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 const LoginContext = createContext();
 
 export const LoginProvider = ({ children }) => {
-  // Dependency array:
-  const [loginData, setLoginData] = useState({});
+  const [loginData, setLoginData] = useState(null); // Start med at sætte loginData som null
 
   useEffect(() => {
-    // Hvis den findes, er det den vi henter ud med getItem, og dermed bliver det gjort tilgængeligt for alle indlejrede komponenter (children) i provideren:
-    if (sessionStorage.getItem('access_token')) {
-      // sessionStorage er strings, der kan ikke vises noget javascript. Derfor skal vi bruge JSON til at konvertere:
-      setLoginData(JSON.parse(sessionStorage.getItem('access_token')));
+    const storedToken = sessionStorage.getItem('access_token');
+    if (storedToken) {
+      setLoginData(JSON.parse(storedToken));
+    } else {
+      setLoginData(); // Sørg for, at loginData altid starter som tomt objekt, hvis der ikke er gemt adgangsnøgle
     }
   }, [children]);
 
@@ -20,6 +20,7 @@ export const LoginProvider = ({ children }) => {
     </LoginContext.Provider>
   );
 };
+
 
 export const useLogin = () => useContext(LoginContext);
 
