@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from './CartContext';
+import styles from './Cart.module.scss';
 
 export const Cart = () => {
   const { cart, removeFromCart } = useCart();
@@ -20,18 +21,24 @@ export const Cart = () => {
   // Render indholdet af kurven
   return (
     <div>
-      <h4>Din kurv</h4>
-      <ul>
-        {cart.map(item => (
-          <li key={item.id}>
+      <ul className={styles['cart-list']}>
+        {cart.map((item) => (
+          <li key={item.id} className={styles['cart-item']}>
             {/* Vis information om hvert vareelement */}
-            <img src={item.image} alt={item.title} style={{ width: '50px', marginRight: '10px' }} />
-            {item.title} - {item.quantity} stk - Kr. {item.price.toFixed(2)} 
+            <img src={item.image} alt={item.title} />
+            <div className={styles['item-details']}>
+              <h4>{item.title}</h4>
+              <p>{item.quantity} stk. </p>
+            </div>
+            <p className={styles['item-price']}>Kr. {(item.price * item.quantity).toFixed(2)}</p>
             <button onClick={() => removeFromCart(item.id)}>Fjern</button>
           </li>
         ))}
       </ul>
-      <p>Samlet pris: Kr. {total.toFixed(2)}</p>
+      <div className={styles.samlet}>
+        <p>Samlet pris: Kr. {total.toFixed(2)}</p>
+        <button onClick={() => alert('Implementer checkout logik her')}>Gå til check ud</button>
+      </div>
     </div>
   );
 };

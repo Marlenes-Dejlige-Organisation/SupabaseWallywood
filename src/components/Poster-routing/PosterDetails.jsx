@@ -29,7 +29,7 @@ export const PosterDetails = () => {
         title: apiData.name,
         price: apiData.price,
         quantity: quantity,
-        image: apiData.image, // inkludér billedet i kurven
+        image: apiData.image, 
       });
       alert('Varen er blevet tilføjet til din kurv!');
     } else {
