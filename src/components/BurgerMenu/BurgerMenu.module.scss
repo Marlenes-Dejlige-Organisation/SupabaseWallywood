@@ -4,14 +4,23 @@
   display: none;
   position: fixed;
   top: 1rem;
-  left: 1.4rem;
+  left: 2rem;
   z-index: 1000;
+  background-color: #F9F9F9; 
+  border-radius: 8px;
+  padding: 0.4rem;
 
   .burgerIcon {
     cursor: pointer;
-    padding: 10px;
+    padding: 1px;
     display: flex;
     flex-direction: column;
+  }
+  a{
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #D97852;
   }
 
   .bar {
@@ -40,12 +49,16 @@
     top: 0;
     right: 0;
     left: 0;
-    width: 90vw;
+ 
+    width: 87vw;
     text-align: center;
     background-color: #ffffff;
     padding: 10px;
     border: 1px solid lightgrey;
     border-radius: 5px;
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
+
 
     .menuLink {
       display: block;
@@ -57,9 +70,10 @@
       transition: color 0.3s;
 
       &:hover {
-        color: Blue;
+        color:  #D97852;
         text-decoration: underline;
       }
+
     }
   }
 

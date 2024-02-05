@@ -1,13 +1,30 @@
-.grid{
+.grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
     padding-bottom: 5rem;
-    .billede{
-        margin-left: 2rem;
+  
+    .billede {
+      margin-left: 2rem;
     }
-    img{
-        height: 100%;
-        width: 100%;
+  
+    img {
+      height: 100%;
+      width: 100%;
     }
-}
+  
+    @media (max-width: 634px) {
+        display: flex;
+      flex-direction: column; /* Ændre til lodret layout */
+  
+      .billede {
+        margin-left: 0;
+        order: -1; /* Flyt billedet til toppen */
+      }
+  
+      .content {
+        order: 0; /* Sørg for, at indholdet kommer under billedet */
+      }
+    }
+  }
+  
