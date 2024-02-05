@@ -4,5 +4,13 @@
     gap: 1rem;
     border-left: #D97852 solid 1px;
     padding-left: 2rem;
+    @media (max-width: 634px) {
+        grid-template-columns: 1fr;
+        img{
+            width: 50%;
+        }
+      
     
+      }
 }
+    

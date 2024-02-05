@@ -1,14 +1,23 @@
 // pageContainer.scss
 .page-container {
-    background-color: #F9F9F9; 
-    width: 1067px; /* Bredde på 1067px */
-    margin: 0 auto; /* Centrer indholdet */
-    padding: 2rem; /* Juster padding efter behov */
-    min-height: 100vh;  /* Minimum 100% af viewportens højde */
+  display: grid;
+  background-color: #F9F9F9;
+  width: 80vw;
+  /* Bredde på 1067px */
+  margin: 0 auto;
+  /* Centrer indholdet */
+  padding: 2rem;
+  /* Juster padding efter behov */
+  min-height: 100vh;
+  /* Minimum 100% af viewportens højde */
   display: flex;
   flex-direction: column;
-  @media (max-width: 1065px) {
-    width: 90vw; /* Ændrer bredden til 350px ved skærmstørrelse 375 eller derunder */
-  }
-  }
+
+  @media (max-width: 634px) {
+    width: 90vw;
   
+
+  }
+
+
+}
