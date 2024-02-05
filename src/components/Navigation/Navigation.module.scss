@@ -16,6 +16,9 @@
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    @media (max-width: 634px) {
+      display:none;
+    }
 
     li {
       margin-right: 1.5rem;
@@ -36,11 +39,10 @@
          
         }
       }
-
-
     }
   }
 }
+
 .activeNavLink {
   font-weight: 700;
   color: #D97852;
@@ -52,4 +54,14 @@ text-decoration: none;
   display: flex;
   justify-content: end;
   padding: 0 1rem;
+}
+
+
+@media (max-width: 634px) {
+  .navWrapper {
+    ul {
+      display: none;
+    }
+
+  }
 }

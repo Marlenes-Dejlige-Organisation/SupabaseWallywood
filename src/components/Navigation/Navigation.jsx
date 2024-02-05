@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Navigation.module.scss';
 import { NavLink } from 'react-router-dom';
 import vogn from '../../assets/images/shopping_cart_FILL0_wght400_GRAD0_opsz24.png';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 export const Navigation = () => {
   const activeLink = "font-bold";
@@ -13,6 +14,7 @@ export const Navigation = () => {
       </NavLink>
       <nav className={styles.navWrapper}>
         <h1>WALLYWOOD</h1>
+        <BurgerMenu />
         <ul>
           <li><NavLink to="/" className={({ isActive }) => isActive ? styles.activeNavLink : styles.NavLink}>HOME</NavLink></li>
           <li><NavLink to="/plakater" className={({ isActive }) => isActive ? styles.activeNavLink : styles.NavLink}>PLAKATER</NavLink></li>

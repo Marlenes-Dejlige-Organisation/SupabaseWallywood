@@ -7,6 +7,8 @@
     min-height: 100vh;  /* Minimum 100% af viewportens højde */
   display: flex;
   flex-direction: column;
-
+  @media (max-width: 1065px) {
+    width: 90vw; /* Ændrer bredden til 350px ved skærmstørrelse 375 eller derunder */
+  }
   }
   

@@ -6,6 +6,7 @@
 
 
 
+
 .ListContainer {
     flex: 1;
     
@@ -43,4 +44,16 @@
       }
     }
   }
+  @media (max-width: 634px) {
+    .pageContainer{
+      display: flex;
+      width: 90vw;
   
+   
+    }
+    .ListContainer {
+      width: 2%;
+  
+    }
+
+  }

@@ -7,6 +7,12 @@ header{
         object-fit: cover;
         border-radius: 10px;
         border: none;
+        @media (max-width: 375px) {
+            width: 86vw; /* Ændrer bredden til 350px ved skærmstørrelse 375 eller derunder */
+            height: 200px;
+          
+        
+          }
     }
     
 }
