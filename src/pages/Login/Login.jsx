@@ -2,6 +2,7 @@ import axios from "axios";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
 import { useLogin } from "../../components/LoginProvider/LoginProvider"
 import { useForm } from "react-hook-form";
+import styles from "../Login/Login.module.scss"
 
 export const Login = () => {
     const { loginData, setLoginData } = useLogin();
@@ -31,12 +32,12 @@ export const Login = () => {
               <div>
                 <label htmlFor="username">Email:</label>
                 <input type="email" id="username" {...register('username', { required: true })} />
-                {errors.username && <span>Bruger-email skal udfyldes</span>}
+                {errors.username && <span className={styles.message}>Bruger-email skal udfyldes</span>}
               </div>
               <div>
                 <label htmlFor="password">Adgangskode:</label>
                 <input type="password" id="password" {...register('password', { required: true })} />
-                {errors.password && <span>Password skal udfyldes</span>}
+                {errors.password && <span className={styles.message}> Password skal udfyldes</span>}
               </div>
               <div>
                 <button>Login</button>
