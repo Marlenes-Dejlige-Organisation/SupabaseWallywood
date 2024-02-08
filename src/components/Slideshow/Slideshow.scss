@@ -1,0 +1,21 @@
+.each > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+
+  }
+//    button.nav.default-nav{
+//      background-color: #d97852;
+// }
+
+
+
+[data-type="prev"]{
+    margin-left: 1rem;
+}
+
+[data-type="next"]{
+    margin-right: 1rem;
+}
