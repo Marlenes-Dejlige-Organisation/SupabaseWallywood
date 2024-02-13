@@ -1,26 +1,34 @@
-import axios from "axios";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import styles from '../Navigation/Navigation.module.scss';
+import { useSupabase} from "../../Providers/SupabaseProvider"
 
 export const GenreNav = ({ onDefaultGenreSelected }) => {
+
     const [apiData, setApiData] = useState([]);
-    
+    const { supabase } = useSupabase();
+
     const getData = async () => {
-        const endpoint = `http://localhost:3000/genre`;
-        const result = await axios.get(endpoint);
-        setApiData(result.data);
-        
-        // Hvis der er data og en callback er tilgængelig, vælg den første genre som standard
-        if (result.data.length > 0 && onDefaultGenreSelected) {
-            onDefaultGenreSelected(result.data[0].slug);
+
+        if (supabase) {
+            const { data, error } = await supabase
+                .from ('genres')
+                .select ('*')
+                .order('title')
+            if(error) {
+                console.error("fejl i kald af genrer", error);
+            } else{
+                setApiData(data); // Ændret setGenreData til setApiData her
+            }
         }
-    };
+    }
 
     useEffect(() => {
         getData();
-    }, []);
+    }, [supabase]); // Fjernet setGenreData fra dependencies
 
+ 
+    
     return (
         <>
             <ul>
